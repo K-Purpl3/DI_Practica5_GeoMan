@@ -26,7 +26,7 @@ class ImageAdapter(private val images: List<Int>) : RecyclerView.Adapter<ImageAd
         val resId = images[position]
         holder.thumb.setImageResource(resId)
 
-        // onClick: buscamos el ImageSwitcher en la vista raíz y cambiamos la imagen
+        //onClick buscamos el ImageSwitcher en la vista raíz y cambiamos la imagen
         holder.itemView.setOnClickListener { v ->
             // Opción 1: getRootView()
             val root = v.rootView
@@ -36,7 +36,7 @@ class ImageAdapter(private val images: List<Int>) : RecyclerView.Adapter<ImageAd
                 return@setOnClickListener
             }
 
-            // Opción 2: fallback con Activity cast
+            //fallback con Activity cast por si acaso
             val activity = v.context as? Activity
             activity?.findViewById<ImageSwitcher>(R.id.imageSwitcher)?.setImageResource(resId)
         }

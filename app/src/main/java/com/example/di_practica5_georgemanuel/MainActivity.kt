@@ -13,7 +13,7 @@ import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : AppCompatActivity() {
 
-    // lista de recursos de ejemplo — reemplaza por tus drawables
+    //lista de recursos de ejemplo
     private val images = listOf(
         R.drawable.image1,
         R.drawable.image2,
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = "Travels"
 
         val imageSwitcher = findViewById<ImageSwitcher>(R.id.imageSwitcher)
-        // Configurar ViewFactory del ImageSwitcher
+        //configurar ViewFactory del ImageSwitcher
         imageSwitcher.setFactory(object : ViewSwitcher.ViewFactory {
             override fun makeView(): View {
                 val iv = ImageView(applicationContext)
@@ -42,10 +42,10 @@ class MainActivity : AppCompatActivity() {
                 return iv
             }
         })
-        // poner una imagen inicial si quieres
+        //poner una imagen inicial si quieres
         imageSwitcher.setImageResource(images.first())
 
-        // RecyclerView horizontal
+        //recyclerView horizontal
         val rv = findViewById<RecyclerView>(R.id.recyclerView)
         rv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         val adapter = ImageAdapter(images)

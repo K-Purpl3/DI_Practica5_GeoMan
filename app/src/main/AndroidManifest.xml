@@ -13,7 +13,6 @@
         android:theme="@style/Theme.Material3.DayNight.NoActionBar"
         tools:targetApi="34">
 
-        <!-- Actividad principal (RecyclerView + ImageSwitcher) -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
