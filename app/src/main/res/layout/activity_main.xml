@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- RecyclerView horizontal con miniaturas -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#4CAF50"
+        android:contentInsetStartWithNavigation="0dp"
+        android:elevation="4dp"
+        app:title="Travels"
+        app:titleCentered="false"
+        app:titleTextColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp" />
+
+    <!-- ImageSwitcher para mostrar la imagen grande -->
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher"
+        android:layout_width="379dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- RecyclerView horizontal con miniaturas -->
+</LinearLayout>
