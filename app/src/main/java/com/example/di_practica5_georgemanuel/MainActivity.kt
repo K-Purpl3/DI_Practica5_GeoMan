@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
         R.drawable.image6,
         R.drawable.image7,
         R.drawable.image8,
-    )
+        R.drawable.image9,
+        R.drawable.image10,
+        )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
