@@ -26,18 +26,18 @@ class AdaptSolar(
         holder.imageViewSolar.setImageResource(item.imageResId)
         holder.toolbar.title = item.name
 
-        // Inflar menú (asegúrate de hacerlo solo una vez por holder)
+        //inflar menu
         holder.toolbar.menu.clear()
         holder.toolbar.inflateMenu(R.menu.menu_solar_item)
 
-        // Listener para el menú overflow
+        //listener para el menú overflow
         holder.toolbar.setOnMenuItemClickListener { menuItem ->
             val adapterPosition = holder.bindingAdapterPosition
             if (adapterPosition == RecyclerView.NO_POSITION) return@setOnMenuItemClickListener false
 
             when (menuItem.itemId) {
                 R.id.action_copy -> {
-                    // Copiar: crear una copia y añadir justo después
+                    //copiar: crear una copia y añadir justo después
                     val originalItem = solarList[adapterPosition]
                     val copied = SolarItem(originalItem.name + " (Copia)", originalItem.imageResId)
                     solarList.add(adapterPosition + 1, copied)
@@ -45,7 +45,7 @@ class AdaptSolar(
                     true
                 }
                 R.id.action_delete -> {
-                    // Eliminar
+                    //eliminar
                     solarList.removeAt(adapterPosition)
                     notifyItemRemoved(adapterPosition)
                     true

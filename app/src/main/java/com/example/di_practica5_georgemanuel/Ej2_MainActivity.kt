@@ -30,7 +30,7 @@ class Ej2_MainActivity : AppCompatActivity() {
         adapter = AdaptSolar(solarList)
         recyclerView.adapter = adapter
 
-        // Grid de 2 columnas (ajusta según diseño)
+        //grid de 2 columnas
         val spanCount = 2
         recyclerView.layoutManager = GridLayoutManager(this, spanCount)
     }
